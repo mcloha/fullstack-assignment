@@ -56,7 +56,6 @@ function drawViz() {
     drawContext.fillRect(i * barWidth, offset, 1, 2);
   }
 
-  //requestAnimationFrame(drawViz);
   setTimeout(drawViz, 5);
 
 }
@@ -87,7 +86,6 @@ function downloadRawData(startTimestamp, stopTimestamp) {
   link.setAttribute('href', encodedUri);
   link.setAttribute('download', 'time.csv');
   link.click();
-
 }
 
 function startRecording() {

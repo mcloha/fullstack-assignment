@@ -11,10 +11,6 @@ $(function(){
     startRecording();
     startSensorRecording();
 
-    /*setTimeout(function(){
-      $('#stopSession').trigger('click');
-    }, 3000);*/
-
   });
 
   $('#stopSession').on('click', function () {
