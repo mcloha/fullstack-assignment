@@ -1,0 +1,32 @@
+.nav {
+  margin: 25px 0;
+}
+.input-group {
+  margin-bottom: 2px;
+}
+#recording {
+  background: #ff3838;
+  height: 10px;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  display: none;
+  animation: pulse 1s infinite;
+  position: fixed;
+}
+#logs {
+  list-style: none;
+  padding: 0;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #fa2222;
+  }
+  100% {
+    background-color: rgb(252, 233, 232);
+  }
+  0% {
+    background-color: #fa2222;
+  }
+}

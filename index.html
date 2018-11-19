@@ -1,0 +1,139 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>MyndYou - Tracker POC</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+
+      <div id="recording"></div>
+
+      <div class="container">
+
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">MyndYou</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" id="startSession" href="#">Start Session</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="stopSession" href="#">Stop</a>
+          </li>
+        </ul><!-- /nav -->
+        
+        <div class="row justify-content-center">
+          <canvas></canvas>
+        </div>
+
+        <div class="row">
+          <div class="col-sm">
+            <div class="alert alert-primary" role="alert">Logs</div>
+            <ul id="logs">
+              <li class="alert alert-light">App loaded..</li>
+            </ul>
+          </div>
+          <!-- /logs -->
+          <div class="col-sm">
+            <div class="alert alert-primary" role="alert">Audio</div>
+            <div class="alert alert-light" id="audioNote" role="alert">
+              Will be available once session was stopped
+            </div>
+            <audio id="audioPlayer"></audio>
+            <!-- <a id="downloadAudio">Download audio</a> -->
+          </div>
+          <!-- /audio -->
+          <div class="col-sm">
+            <div class="alert alert-primary" role="alert">Sensor data</div>
+            
+            <div class="input-group col-xs-12">
+              <span class="input-group-addon">Compass</span>
+              <input type="text" class="form-control" id="compassHeading" disabled>
+            </div>
+
+            Orientation
+
+            <div class="input-group col-xs-12">
+              <span class="input-group-addon">alpha</span>
+              <input type="text" class="form-control" id="do_alpha" disabled>
+            </div>
+            
+            <div class="input-group col-xs-12">
+              <span class="input-group-addon">beta</span>
+              <input type="text" class="form-control" id="do_beta" disabled>
+            </div>
+            
+            <div class="input-group col-xs-12">
+              <span class="input-group-addon">gamma</span>
+              <input type="text" class="form-control" id="do_gamma" disabled>
+            </div>
+            
+             Acceleration
+
+            <div class="input-group col-xs-4 first">
+              <span class="input-group-addon">x</span>
+              <input type="text" class="form-control" id="dm_x" disabled>
+            </div>
+            
+            <div class="input-group col-xs-4">
+              <span class="input-group-addon">y</span>
+              <input type="text" class="form-control" id="dm_y" disabled>
+            </div>
+            
+            <div class="input-group col-xs-4">
+              <span class="input-group-addon">z</span>
+              <input type="text" class="form-control" id="dm_z" disabled>
+            </div>
+
+             Acceleration including gravity
+
+            <div class="input-group col-xs-4 first">
+              <span class="input-group-addon">x</span>
+              <input type="text" class="form-control" id="dm_gx" disabled>
+            </div>
+            
+            <div class="input-group col-xs-4">
+              <span class="input-group-addon">y</span>
+              <input type="text" class="form-control" id="dm_gy" disabled>
+            </div>
+            
+            <div class="input-group col-xs-4">
+              <span class="input-group-addon">z</span>
+              <input type="text" class="form-control" id="dm_gz" disabled>
+            </div>
+
+            Rotation rate
+
+          <div class="input-group col-xs-12">
+            <span class="input-group-addon">alpha</span>
+            <input type="text" class="form-control" id="dm_alpha" disabled>
+          </div>
+          
+          <div class="input-group col-xs-12">
+            <span class="input-group-addon">beta</span>
+            <input type="text" class="form-control" id="dm_beta" disabled>
+          </div>
+          
+          <div class="input-group col-xs-12">
+            <span class="input-group-addon">gamma</span>
+            <input type="text" class="form-control" id="dm_gamma" disabled>
+          </div>
+
+          </div><!-- /sensors -->
+        </div>
+      </div>
+
+      <!-- JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="gyronorm.complete.js"></script>
+
+      <script src="logger.js"></script>
+      <script src="audio.js"></script>
+      <script src="sensors.js"></script>
+      <script src="main.js"></script>
+
+    </body>
+</html>
